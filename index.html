@@ -9,11 +9,11 @@
 <body>
     <header>
         <h1>Colour Palette Generator</h1>
-        <nav>
+        <nav id="navbar">
             <form>
                 <label for="color-wheel"></label>
                 <input id="color-wheel"type="color" value="#fafafa" />
-                <label for="options"></label>
+                <label for="colour-scheme-selector"></label>
                 <select name="scheme-selector" id="colour-scheme-selector">
                     <option value="monochrome">Monochrome</option>
                     <option value="monochrome-dark">Monochrome-dark</option>
@@ -28,8 +28,8 @@
         </nav>
     </header>
     <main>
-        <section>
-            
+        <section class="palette">
+            <div id="color-palette" class="rendered-colours"></div>
         </section>
     </main>
     

@@ -1,27 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
     padding: 0;
-    background-color: pink;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    margin: 0;
 }
 
 header {
     text-align: center;
+    margin: 0 auto;
+    padding: 1em 0 0;
 }
 
 nav {
-    background-color: yellow;
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 50vw;
+    display: flex;  
+    justify-content: center;   
 }
 
-form {
+body, input, select {
+    margin: 1em 0.5em;
+}
+
+input {
+    width: 21%;
+}
+
+button, .rendered-colours {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(49, 191, 136);
+    color:#fafafa;
+}
+
+button, select {
+    font-size: 1rem;
+    padding: 0.4em;
+    border-radius: 5px;
+}
+
+.palette {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    height: 50vh;
 }
 
-input, select, button {
-    margin: 0 3em;
-    min-width: 5em;
+.rendered-colours { 
+    padding: 0.5em 0;
 }
 
+.single-color {
+    color: black;
+    font-size: 1.5rem;
+    height: 10vh;
+} 
+
+.single-color:hover {
+    color:#fafafa;
+}
+
+@media (min-width: 900px) {
+
+    .palette,  .rendered-colours {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .single-color {
+       width: 12%;
+       height: 70vh;
+       font-size: 1rem;
+       font-weight: bold;
+    } 
+}
