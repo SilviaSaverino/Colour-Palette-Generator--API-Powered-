@@ -21,11 +21,21 @@ fetch(`https://www.thecolorapi.com/scheme?hex=${selectedColour}&mode=${colorDrop
 })
 
 function renderColourPalette(colourArray) {
+
+    if (!chroma) {
+        console.error('Chroma-js not loaded');
+        return;
+    }
+
     let colorPaletteRenderedHTML =""
     for (let data of colourArray){
+        const brightness = chroma(data).luminance()
+        const textColor = brightness > 0.5 ? 'black' : 'white'
+
         colorPaletteRenderedHTML += `
-        <div class="single-color" style="background-color: ${data}">${data}</div>
-        `
+        <div class="single-color" style="background-color: ${data}; color: ${textColor}">${data}</div>
+        `;
     }
     colorPaletteRendered.innerHTML = colorPaletteRenderedHTML
+
 }
