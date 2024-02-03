@@ -1,6 +1,8 @@
 # Colour Palette Generator - API Powered
 This project utilizes a dynamic color palette generation mechanism, integrating user input and an external API to create visually appealing and accessible color schemes.
 
+Check out the [Live Site](https://silviasaverino.github.io/Colour-Palette-Generator--API-Powered-/)
+
 ## API used:
 The project uses an external API: [The color api](https://www.thecolorapi.com/docs#schemes) to obtain color schemes based on user input.
 
